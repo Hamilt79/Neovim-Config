@@ -5,3 +5,4 @@ vim.opt.number = true
 vim.opt.scrolloff = 999
 vim.opt.wrap = false
 vim.opt.expandtab = true
+vim.opt.clipboard = "unnamedplus"
