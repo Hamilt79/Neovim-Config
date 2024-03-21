@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup( {
-	ensure_installed = { "lua_ls", "rust_analyzer", "clangd", "html", "cssls", "denols", "omnisharp" },
+	ensure_installed = { "lua_ls", "rust_analyzer", "clangd", "html", "cssls", "omnisharp", "marksman", "eslint" },
 } )
 
 local cmp = require("cmp")
@@ -49,8 +49,9 @@ require("lspconfig").clangd.setup { capabilities = capabilties }
 
 require("lspconfig").html.setup { capabilities = capabilties }
 require("lspconfig").cssls.setup { capabilities = capabilties }
-require("lspconfig").denols.setup { capabilities = capabilties }
+require("lspconfig").eslint.setup { capabilities = capabilties }
 require("lspconfig").omnisharp.setup { capabilities = capabilties }
+require("lspconfig").marksman.setup { capabilities = capabilties }
 
 --require("lspconfig").ast_grep.setup { capabilities = capabilties }
 
