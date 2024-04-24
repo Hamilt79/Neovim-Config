@@ -74,11 +74,11 @@ return require('packer').startup(function(use)
 
 	use {'ThePrimeagen/vim-be-good' }
 
-	use { 
-		'mfussenegger/nvim-dap',
-		requires = { 'rcarriga/nvim-dap-ui' }
-		
-		
-}
+-- 	use { 
+-- 		'mfussenegger/nvim-dap',
+-- 		requires = { 'rcarriga/nvim-dap-ui' }
+-- 		
+-- 		
+-- }
 
 end)

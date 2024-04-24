@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup( {
-	ensure_installed = { "lua_ls", "rust_analyzer", "clangd", "html", "cssls", "omnisharp", "marksman", "eslint" },
+	ensure_installed = { "lua_ls", "rust_analyzer", "clangd", "html", "cssls", "omnisharp", "marksman", "tsserver" },
 } )
 
 local cmp = require("cmp")
@@ -35,9 +35,12 @@ cmp.setup({
 	} ),
 })
 
+vim.keymap.set("n", "]g", vim.diagnostic.goto_next)
+vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)
 
 local capabilties = require('cmp_nvim_lsp').default_capabilities()
 --require("lspconfig").golangci_lint.setup {}
+require("lspconfig").tsserver.setup { capabilities = capabilties }
 require("lspconfig").lua_ls.setup { capabilities = capabilties }
 require("lspconfig").rust_analyzer.setup {}
 
@@ -49,7 +52,6 @@ require("lspconfig").clangd.setup { capabilities = capabilties }
 
 require("lspconfig").html.setup { capabilities = capabilties }
 require("lspconfig").cssls.setup { capabilities = capabilties }
-require("lspconfig").eslint.setup { capabilities = capabilties }
 require("lspconfig").omnisharp.setup { capabilities = capabilties }
 require("lspconfig").marksman.setup { capabilities = capabilties }
 
