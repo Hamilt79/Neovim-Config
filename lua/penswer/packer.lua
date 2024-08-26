@@ -74,11 +74,18 @@ return require('packer').startup(function(use)
 
 	use {'ThePrimeagen/vim-be-good' }
 
--- 	use { 
--- 		'mfussenegger/nvim-dap',
--- 		requires = { 'rcarriga/nvim-dap-ui' }
--- 		
--- 		
--- }
+    use {
+        'chipsenkbeil/distant.nvim',
+        branch = 'v0.3',
+        config = function()
+            require('distant'):setup()
+        end
+    }
+    -- 	use { 
+        -- 		'mfussenegger/nvim-dap',
+        -- 		requires = { 'rcarriga/nvim-dap-ui' }
+        -- 		
+        -- 		
+        -- }
 
-end)
+    end)
