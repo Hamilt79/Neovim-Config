@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup( {
-	ensure_installed = { "lua_ls", "rust_analyzer", "clangd", "html", "cssls", "omnisharp", "marksman", "tsserver", "intelephense" },
+	ensure_installed = { "lua_ls", "rust_analyzer", "clangd", "html", "cssls", "omnisharp", "marksman", "tsserver", "intelephense", "pylsp" },
 } )
 
 local cmp = require("cmp")
@@ -37,6 +37,7 @@ cmp.setup({
 
 vim.keymap.set("n", "]g", vim.diagnostic.goto_next)
 vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)
+vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)
 vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
 
@@ -44,6 +45,7 @@ local capabilties = require('cmp_nvim_lsp').default_capabilities()
 --require("lspconfig").golangci_lint.setup {}
 require("lspconfig").tsserver.setup { capabilities = capabilties }
 require("lspconfig").lua_ls.setup { capabilities = capabilties }
+require("lspconfig").pylsp.setup { capabilities = capabilties }
 require("lspconfig").rust_analyzer.setup {}
 
 require("lspconfig").gopls.setup { capabilities = capabilties }

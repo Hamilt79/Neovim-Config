@@ -199,6 +199,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/penswer/.local/share/nvim/site/pack/packer/start/vim-be-good",
     url = "https://github.com/ThePrimeagen/vim-be-good"
+  },
+  ["vim-closetag"] = {
+    loaded = true,
+    path = "/home/penswer/.local/share/nvim/site/pack/packer/start/vim-closetag",
+    url = "https://github.com/alvan/vim-closetag"
   }
 }
 

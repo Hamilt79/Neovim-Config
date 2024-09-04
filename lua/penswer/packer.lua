@@ -81,6 +81,9 @@ return require('packer').startup(function(use)
             require('distant'):setup()
         end
     }
+
+    use { 'alvan/vim-closetag' }
+
     -- 	use { 
         -- 		'mfussenegger/nvim-dap',
         -- 		requires = { 'rcarriga/nvim-dap-ui' }
