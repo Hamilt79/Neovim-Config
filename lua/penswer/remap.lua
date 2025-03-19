@@ -4,6 +4,7 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set('t', '<Esc>', "<C-\\><C-n><C-w>h",{silent = true})
 vim.keymap.set('n', '<leader>tt', vim.cmd.NvimTreeToggle)
 vim.keymap.set('n', '<leader>tf', vim.cmd.NvimTreeFindFile)
+vim.keymap.set('n', '<leader>dd', "\"add")
 
 vim.keymap.set('i', '<C-k>', function()
 	vim.lsp.buf.hover()
