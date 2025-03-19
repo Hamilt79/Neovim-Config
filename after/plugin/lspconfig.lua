@@ -43,7 +43,6 @@ vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { no
 
 local capabilties = require('cmp_nvim_lsp').default_capabilities()
 --require("lspconfig").golangci_lint.setup {}
---require("lspconfig").tsserver.setup { capabilities = capabilties }
 require("lspconfig").lua_ls.setup { capabilities = capabilties }
 --require("lspconfig").pylsp.setup { capabilities = capabilties }
 require("lspconfig").rust_analyzer.setup {}
@@ -53,6 +52,8 @@ require("lspconfig").rust_analyzer.setup {}
 ----require("lspconfig").clangd.setup {}
 require("lspconfig").clangd.setup { capabilities = capabilties }
 require("lspconfig").pylsp.setup { capabilities = capabilties }
+
+
 --require("lspconfig").html.setup { capabilities = capabilties }
 --require("lspconfig").cssls.setup { capabilities = capabilties }
 require("lspconfig").omnisharp.setup { capabilities = capabilties }
