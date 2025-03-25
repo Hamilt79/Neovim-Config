@@ -7,7 +7,7 @@
 vim.opt.termguicolors = true
 
 -- empty setup using defaults
-require("nvim-tree").setup( { hijack_directories = { enable = false } } )
+--require("nvim-tree").setup( { hijack_directories = { enable = false } } )
 
 
 

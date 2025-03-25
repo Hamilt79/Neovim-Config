@@ -104,17 +104,6 @@ _G.packer_plugins = {
     path = "/home/penswer/.local/share/nvim/site/pack/packer/start/command-completion.nvim",
     url = "https://github.com/smolck/command-completion.nvim"
   },
-  ["copilot.vim"] = {
-    loaded = true,
-    path = "/home/penswer/.local/share/nvim/site/pack/packer/start/copilot.vim",
-    url = "https://github.com/github/copilot.vim"
-  },
-  ["distant.nvim"] = {
-    config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\2\18\2\0\0009\0\2\0B\0\2\1K\0\1\0\nsetup\fdistant\frequire\0" },
-    loaded = true,
-    path = "/home/penswer/.local/share/nvim/site/pack/packer/start/distant.nvim",
-    url = "https://github.com/chipsenkbeil/distant.nvim"
-  },
   ["gruvbox.nvim"] = {
     loaded = true,
     path = "/home/penswer/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
@@ -135,11 +124,6 @@ _G.packer_plugins = {
     path = "/home/penswer/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  moonfly = {
-    loaded = true,
-    path = "/home/penswer/.local/share/nvim/site/pack/packer/start/moonfly",
-    url = "https://github.com/bluz71/vim-moonfly-colors"
-  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/penswer/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -149,11 +133,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/penswer/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-tree.lua"] = {
-    loaded = true,
-    path = "/home/penswer/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
-    url = "https://github.com/nvim-tree/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -166,8 +145,9 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
   },
   ["nvim-web-devicons"] = {
-    loaded = true,
-    path = "/home/penswer/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/penswer/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
@@ -180,25 +160,10 @@ _G.packer_plugins = {
     path = "/home/penswer/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["rose-pine"] = {
-    loaded = true,
-    path = "/home/penswer/.local/share/nvim/site/pack/packer/start/rose-pine",
-    url = "https://github.com/rose-pine/neovim"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/penswer/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  undotree = {
-    loaded = true,
-    path = "/home/penswer/.local/share/nvim/site/pack/packer/start/undotree",
-    url = "https://github.com/mbbill/undotree"
-  },
-  ["vim-be-good"] = {
-    loaded = true,
-    path = "/home/penswer/.local/share/nvim/site/pack/packer/start/vim-be-good",
-    url = "https://github.com/ThePrimeagen/vim-be-good"
   },
   ["vim-closetag"] = {
     loaded = true,
@@ -208,10 +173,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: distant.nvim
-time([[Config for distant.nvim]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\2\18\2\0\0009\0\2\0B\0\2\1K\0\1\0\nsetup\fdistant\frequire\0", "config", "distant.nvim")
-time([[Config for distant.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

@@ -11,21 +11,21 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
-	use {'rose-pine/neovim', as = 'rose-pine' }
+	--use {'rose-pine/neovim', as = 'rose-pine' }
 
-	vim.cmd('colorscheme rose-pine')
+	--vim.cmd('colorscheme rose-pine')
 
 	use {
 		'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate'
 	}
 
-	use {
-		'mbbill/undotree'
-	}
+--	use {
+--		'mbbill/undotree'
+--	}
 
 
-	use { 'github/copilot.vim' }
+	--use { 'github/copilot.vim' }
 
 	--	use {'stevearc/dressing.nvim'}
 
@@ -37,12 +37,12 @@ return require('packer').startup(function(use)
 
 	use { 'nvim-treesitter/nvim-treesitter-context' }
 
-	use {
-		'nvim-tree/nvim-tree.lua',
-		requires = {
-			'nvim-tree/nvim-web-devicons', -- optional
-		},
-	}
+--	use {
+--		'nvim-tree/nvim-tree.lua',
+--		requires = {
+--			'nvim-tree/nvim-web-devicons', -- optional
+--		},
+--	}
 
 	use {
 		'nvim-lualine/lualine.nvim',
@@ -68,19 +68,19 @@ return require('packer').startup(function(use)
 	})
 
 	-- ColorSchemes
-	use { 'bluz71/vim-moonfly-colors', as='moonfly' }
+	--use { 'bluz71/vim-moonfly-colors', as='moonfly' }
 	use { 'ellisonleao/gruvbox.nvim' }
 
 
-	use {'ThePrimeagen/vim-be-good' }
+	--use {'ThePrimeagen/vim-be-good' }
 
-    use {
-        'chipsenkbeil/distant.nvim',
-        branch = 'v0.3',
-        config = function()
-            require('distant'):setup()
-        end
-    }
+   -- use {
+   --     'chipsenkbeil/distant.nvim',
+   --     branch = 'v0.3',
+   --     config = function()
+   --         require('distant'):setup()
+   --     end
+   -- }
 
     use { 'alvan/vim-closetag' }
 
