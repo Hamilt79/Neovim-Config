@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup( {
-	--ensure_installed = { "lua_ls", "rust_analyzer", "clangd", "html", "cssls", "omnisharp", "marksman", "tsserver", "intelephense", "pylsp" },
+	ensure_installed = { "lua_ls", "rust_analyzer", "clangd", "omnisharp", "marksman", "pylsp", "zls" },
 } )
 
 local cmp = require("cmp")
@@ -58,6 +58,7 @@ require("lspconfig").pylsp.setup { capabilities = capabilties }
 --require("lspconfig").cssls.setup { capabilities = capabilties }
 require("lspconfig").omnisharp.setup { capabilities = capabilties }
 require("lspconfig").marksman.setup { capabilities = capabilties }
+require("lspconfig").zls.setup { capabilities = capabilties }
 --require("lspconfig").intelephense.setup { capabilities = capabilties, root_dir = require("lspconfig").util.root_pattern("composer.json", ".git", "*.php"), }
 
 --require("lspconfig").ast_grep.setup { capabilities = capabilties }
