@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/penswer/.local/share/nvim/site/pack/packer/start/command-completion.nvim",
     url = "https://github.com/smolck/command-completion.nvim"
   },
+  ["cyberdream.nvim"] = {
+    loaded = true,
+    path = "/home/penswer/.local/share/nvim/site/pack/packer/start/cyberdream.nvim",
+    url = "https://github.com/scottmckendry/cyberdream.nvim"
+  },
   ["gruvbox.nvim"] = {
     loaded = true,
     path = "/home/penswer/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",

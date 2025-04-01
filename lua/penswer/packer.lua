@@ -70,6 +70,7 @@ return require('packer').startup(function(use)
 	-- ColorSchemes
 	--use { 'bluz71/vim-moonfly-colors', as='moonfly' }
 	use { 'ellisonleao/gruvbox.nvim' }
+	use { 'scottmckendry/cyberdream.nvim' }
 
 
 	--use {'ThePrimeagen/vim-be-good' }
