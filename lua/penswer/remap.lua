@@ -25,3 +25,19 @@ end)
 vim.keymap.set({'i', 'n'}, '<C-s>', function()  
     vim.cmd.write()
 end)
+
+function comment()
+    --vim.cmd([[visual :s/^\(\/\/\)\@!/\/\/]])
+    vim.cmd([[s/^\(\/\/\)\@!/\/\/]])
+    vim.cmd([[nohlsearch]])
+end
+
+function uncomment()
+    vim.cmd([[s/^\/*]])
+    vim.cmd([[nohlsearch]])
+end
+
+vim.keymap.set('v', '<leader>c', comment)
+vim.keymap.set('v', '<leader>u', uncomment)
+vim.keymap.set('n', '<leader>c', comment)
+vim.keymap.set('n', '<leader>u', uncomment)
