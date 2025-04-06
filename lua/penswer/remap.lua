@@ -28,16 +28,19 @@ end)
 
 function comment()
     --vim.cmd([[visual :s/^\(\/\/\)\@!/\/\/]])
-    vim.cmd([[s/^\(\/\/\)\@!/\/\/]])
-    vim.cmd([[nohlsearch]])
+    --vim.cmd([[s/^\(\/\/\)\@!/\/\/]])
+
+    --vim.cmd([[nohlsearch]])
+    return [[:s/^\(\/\/\)\@!/\/\// | nohlsearch | <enter>]]
 end
 
 function uncomment()
-    vim.cmd([[s/^\/*]])
-    vim.cmd([[nohlsearch]])
+    --vim.cmd([[s/^\/*]])
+    --vim.cmd([[nohlsearch]])
+    return [[:s/^\/*// | nohlsearch | <enter>]]
 end
 
-vim.keymap.set('v', '<leader>c', comment)
-vim.keymap.set('v', '<leader>u', uncomment)
-vim.keymap.set('n', '<leader>c', comment)
-vim.keymap.set('n', '<leader>u', uncomment)
+vim.keymap.set('v', '<leader>c', comment())
+vim.keymap.set('v', '<leader>u', uncomment())
+vim.keymap.set('n', '<leader>c', comment())
+vim.keymap.set('n', '<leader>u', uncomment())
