@@ -31,13 +31,17 @@ function comment()
     --vim.cmd([[s/^\(\/\/\)\@!/\/\/]])
 
     --vim.cmd([[nohlsearch]])
-    return [[:s/^\(\/\/\)\@!/\/\// | nohlsearch | <enter>]]
+    --return [[:s/^\(\/\/\)\@!/\/\// | nohlsearch | <enter>]]
+    --return [[:s/^\(\/\/\)\@!\( *[^ ]\)\@=/\/\// | nohlsearch | <enter>]]
+    return [[:s/^\( *\/\/\)\@!\( *\)\([^ ]\)/\2\/\/\3/ | nohlsearch | <enter>]]
+    --return [[:s/\(\/\/\)\@!\(^\)@<=\( *[^ ]\)\@=/\/\// | nohlsearch | <enter>]]
 end
 
 function uncomment()
     --vim.cmd([[s/^\/*]])
     --vim.cmd([[nohlsearch]])
-    return [[:s/^\/*// | nohlsearch | <enter>]]
+    --return [[:s/^\/*// | nohlsearch | <enter>]]
+    return [[:s/\(^ *\)\@<=\/*//g | nohlsearch | <enter>]]
 end
 
 vim.keymap.set('v', '<leader>c', comment())
